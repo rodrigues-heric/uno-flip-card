@@ -1,0 +1,121 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px 0px 0px 0px;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    background-color: #999999;
+}
+
+.flip__card {
+    position: absolute;
+    width: 180;
+    height: 300;
+    background-color: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.flip__card__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform .3s;
+    transform-style: preserve-3d;
+}
+
+.flip__card:hover .flip__card__inner {
+    transform: rotateY(180deg);
+}
+
+.flip__card__front, .flip__card__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip__card__back {
+    transform: rotateY(180deg);
+}
+
+.card__front {
+    width: 180;
+    height: 300;
+    border-radius: 8px;
+    border: 8px solid white;
+    background-color: red;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.num {
+    color: white;
+    font-size: xx-large;
+    text-decoration: underline;
+    text-shadow: 2px 2px black;
+}
+
+.ellipsis {
+    height: 120px;
+    width: 245px;
+    background-color: white;
+    position: absolute;
+    top: 30%;
+    left: -18%;
+    transform: rotate(-45deg);
+    border-radius: 50%;
+}
+
+.num__top {
+    position: absolute;
+    top: 1;
+    left: 4;
+}
+
+.num__mid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    font-size: 72px;
+}
+
+.num__bot    {
+    position: absolute;
+    bottom: 1;
+    right: 4;
+    transform: rotate(180deg);
+}
+
+.card__back {
+    width: 180;
+    height: 300;
+    border-radius: 8px;
+    border: 8px solid white;
+    background-color: black;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card__back > .ellipsis {
+    background-color: red;
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 72px;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
